@@ -1,3 +1,21 @@
+/**
+ * Supabase Table Definitions
+ * 
+ * events:
+ * - id: integer (Primary Key)
+ * - created_at: timestamp with time zone
+ * - name: text
+ * - date: date
+ * - venue_id: integer
+ * - is_starred: boolean
+ * 
+ * comments:
+ * - id: integer (Primary Key)
+ * - created_at: timestamp with time zone
+ * - content: text
+ * - event_id: integer (Foreign Key to events.id)
+ */
+
 import { createClient } from '@supabase/supabase-js';
 import { useQuery, useMutation, useQueryClient, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
